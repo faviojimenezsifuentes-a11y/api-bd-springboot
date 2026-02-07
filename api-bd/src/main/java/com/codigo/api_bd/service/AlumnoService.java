@@ -4,10 +4,13 @@ import com.codigo.api_bd.dto.AlumnoCreateRequest;
 import com.codigo.api_bd.dto.AlumnoResponse;
 import com.codigo.api_bd.model.Alumno;
 import com.codigo.api_bd.repository.AlumnoRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
 
-@Service
+import java.util.List;
+import java.util.UUID;
 @Service
 public class AlumnoService {
     private final AlumnoRepository repository;
